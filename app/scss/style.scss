@@ -1,3 +1,6 @@
+@import 'partials/colors';
+@import 'partials/common';
+
 body {
-  background-color: yellow;
+  background-color: $basicWhite;
 }
