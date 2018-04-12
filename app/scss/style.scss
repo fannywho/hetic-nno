@@ -1,6 +1,12 @@
 @import 'partials/colors';
 @import 'partials/common';
 
-body {
-  background-color: $basicWhite;
+@font-face {
+   font-family: ArialRoundedBold;
+   src: url(../fonts/ArialRoundedBold.ttf);
+}
+
+@font-face {
+   font-family: Helvetica;
+   src: url(../fonts/Helvetica-01.ttf);
 }
