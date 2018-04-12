@@ -1,0 +1,13 @@
+@mixin bp($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (min-width: 320px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "desktop" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+}

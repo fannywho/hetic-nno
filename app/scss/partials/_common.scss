@@ -41,31 +41,33 @@
 .support-card--headline{}
 
 //6
-.reassurance-box{}
-
-//7
-.reassurance-box--yellow{}
-
-//8
-.reassurance-box--orange{}
-
+// I mixed all the boxes which have a height, width and a background color
+@mixin box($backgroundColor, $width, $height) {
+  width: $width;
+  height: $height;
+  background-color: $backgroundColor
+}
 //25
-.text-normal{}
-
-//17
-.contact-form{}
-
-//18
-.contact-form--label{}
-
-//19
-.contact-form--input{}
-
-//20
-.contact-form--textarea{}
+// This mixin is used if you want to setup the text properties
+@mixin text($width, $height, $fontName, $fontSize, $fontWeight, $fontStyle, $fontStretch, $lineHeight, $letterSpacing, $align) {
+  width: $width;
+  height: $height;
+  font-family: $fontName;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  font-style: $fontStyle;
+  font-stretch: $fontStretch;
+  line-height:$lineHeight;
+  letter-spacing: $letterSpacing;
+  text-align: $align;
+}
 
 //21
-.contact-form--button{}
+// This mixin is used for all the nodes which have a height, width, border-radius and a background-color
+@mixin item-rounded($width, $height, $borderRadius, $backgroundColor){
+  width: $width;
+  height: $height;
+  border-radius: $borderRadius;
+  background-color: $backgroundColor;
+}
 
-//16
-.footer-message{}
