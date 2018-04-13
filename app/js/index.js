@@ -50,8 +50,9 @@ function initButtons() {
 
 function initSelect() {
   const select = document.getElementById('target');
+  const selectButton = document.querySelector('.landing-button');
 
-  select.addEventListener('change',() => {
+  selectButton.addEventListener('click', () => {
     const value = select.value;
 
     if(value === 'enfant') {
@@ -61,7 +62,8 @@ function initSelect() {
     } else if (value === 'parent') {
       window.location.pathname = '/index.html';
     }
-  });
+
+  })
 }
 
 function triggerBurgerMenu() {
