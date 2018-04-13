@@ -1,12 +1,50 @@
 @import '../_common';
 
 .reassurance {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
-  @include bp('desktop') {
-    width: 80%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include bp('desktop') {
+      flex-direction: row-reverse;
+    }
   }
   &__title {
-
+    width: 220px;
+    margin-bottom: 45px;
+    @include bp('desktop') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    &--orange {
+      @include box($reassuranceOrange, 100%, 375px);
+      margin-bottom: 40px;
+      color: white;
+    }
+    &--yellow {
+      @include box($reassuranceYellow, 100%, 375px);
+      @include bp('desktop') {
+        margin-right: 40px;
+      }
+    }
+  }
+  &__icon {
+    width: 108px;
+    height: 108px;
+    margin-bottom: 25px;
+    &--large {
+      width: 160px;
+    }
+  }
+  &__text {
+    @include text(Helvetica, 16px, 300, normal, normal, 1.5, 0px, center);
   }
 }
