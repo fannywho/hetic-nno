@@ -2,7 +2,7 @@
 
 .reassurance {
   width: 80%;
-  margin: 0 auto;
+  margin: 4rem auto 6rem auto;
   &__container {
     display: flex;
     flex-direction: column;
@@ -24,15 +24,34 @@
     }
   }
   &__box {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 15px;
+    z-index: 22;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 15px;
+      bottom: 0;
+      left: 0;
+      z-index: 11;
+    }
+
     &--orange {
       @include box($reassuranceOrange, auto, 375px);
       margin-bottom: 40px;
       color: white;
+
+      &:before {
+        background: #ef9602;
+      }
+
       @include bp('desktop') {
         width: 100%;
       }
@@ -40,6 +59,11 @@
     &--yellow {
       @include box($reassuranceYellow, auto, 375px);
       margin-bottom: 40px;
+
+      &:before {
+        background: #ffde00;
+      }
+
       @include bp('desktop') {
         width: 100%;
         margin-right: 40px;
@@ -55,6 +79,7 @@
     }
   }
   &__text {
+    max-width: 300px;
     @include text(Helvetica, 16px, 300, normal, normal, 1.5, 0px, center);
   }
   &__redirection {

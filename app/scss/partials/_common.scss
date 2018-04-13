@@ -149,6 +149,7 @@
     }
   }
   &__textarea {
+    box-sizing: border-box;
     @include item-rounded(auto, 128px, 4px, white);
     @include text(Helvetica, 14px, 300, normal, normal, 1.5px, 0px, left);
     border: none;

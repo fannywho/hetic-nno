@@ -7,24 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 </head>
 <body>
-  <section class='landing'>
-    <div class="landing-content-kids">
-      <nav class="mobile-hidden">
+  <header class="header">
+    <div class="nav__wrapper">
+      <h1 class="nav__logo-outer">
         <a href="index.html">
-          <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
+          <img src="img/img-layout/logo.svg" class="nav__logo" alt="NNO" />
         </a>
-        <ul class="nav-menu text-normal">
-          <li><a href="index.html">grand public</a></li>
-          <li><a href="teachers.html">enseignant</a></li>
-          <li class="active"><a href="kids.html">enfant</a></li>
+      </h1>
+      <nav class="nav__links-outer">
+        <ul class="nav__links text-normal">
+          <li class="nav__title">nos différents espaces</li>
+          <li class="nav__link active">
+            <a href="index.html">grand public</a>
+          </li>
+          <li class="nav__link">
+            <a href="teachers.html">enseignant</a>
+          </li>
+          <li class="nav__link">
+            <a href="kids.html" class="active">enfant</a>
+          </li>
         </ul>
       </nav>
-      <nav class="desktop-hidden">
-        <a href="index.html">
-          <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
-        </a>
-        <img src="img/img-layout/menu.svg" class="burger-menu" alt="menu" />
-      </nav>
+      <div class="bm__outer">
+          <div class="bm">
+            <span class="bm__line"></span>
+            <span class="bm__line"></span>
+            <span class="bm__line"></span>
+          </div>
+        </div>
+    </div>
+  </header>
+  <section class="landing">
+    <div class="landing-content-kids">
       <h2 class="landing-title">
         Est-ce-que tu es déjà allé sur des chaînes Youtube pour y regarder tes vidéos préférées ?
         As-tu déjà réfléchis à comment ta vidéo devenait visible par tous ?
@@ -32,7 +46,7 @@
       </h2>
       <button class="landing-button">commence à jouer !</button>
     </div>
-  </section>
+</section>
 </body>
 <script type="text/javascript" src="js/index.js"></script>
 </html>
