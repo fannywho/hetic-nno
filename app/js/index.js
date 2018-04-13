@@ -1,37 +1,43 @@
 import './slider';
 
-function isLg() {
-  if (window.innerWidth >= 992) {
-    return true;
-  }
+let windowWidth = 0;
+let isLg = false;
 
-  return false;
-}
+const contactLink = document.querySelector('.nav__link--highlighted');
+
+window.addEventListener('resize', () => {
+	windowWidth = window.innerWidth;
+	isLg = windowWidth >= 992;
+});
+
+contactLink.addEventListener('click', () => {
+	document.querySelector('body').classList.toggle('bmIsOpen');
+});
 
 function hoverIcon() {
-  const itSecurity = document.querySelector('.themes-label--itSecurity');
-  const dataProtection = document.querySelector('.themes-label--dataProtection');
-  const algorithm = document.querySelector('.themes-label--algorithm');
-  const itCulture = document.querySelector('.themes-label--itCulture');
-  const digitalCulture = document.querySelector('.themes-label--digitalCulture');
+	const itSecurity = document.querySelector('.themes-label--itSecurity');
+	const dataProtection = document.querySelector('.themes-label--dataProtection');
+	const algorithm = document.querySelector('.themes-label--algorithm');
+	const itCulture = document.querySelector('.themes-label--itCulture');
+	const digitalCulture = document.querySelector('.themes-label--digitalCulture');
 
-  const itSecurityIcon = document.querySelector('.theme-icon--itSecurity');
-  const dataProtectionIcon = document.querySelector('.theme-icon--dataProtection');
-  const algorithmIcon = document.querySelector('.theme-icon--algorithm');
-  const itCultureIcon = document.querySelector('.theme-icon--itCulture');
-  const digitalCultureIcon = document.querySelector('.theme-icon--digitalCulture');
+	const itSecurityIcon = document.querySelector('.theme-icon--itSecurity');
+	const dataProtectionIcon = document.querySelector('.theme-icon--dataProtection');
+	const algorithmIcon = document.querySelector('.theme-icon--algorithm');
+	const itCultureIcon = document.querySelector('.theme-icon--itCulture');
+	const digitalCultureIcon = document.querySelector('.theme-icon--digitalCulture');
 
-  const tags = [itSecurity, dataProtection, algorithm, itCulture, digitalCulture];
-  const icons = [itSecurityIcon, dataProtectionIcon, algorithmIcon, itCultureIcon, digitalCultureIcon];
+	const tags = [itSecurity, dataProtection, algorithm, itCulture, digitalCulture];
+	const icons = [itSecurityIcon, dataProtectionIcon, algorithmIcon, itCultureIcon, digitalCultureIcon];
 
-  tags.forEach((tag, index) => {
-    tag.addEventListener('mouseover', () => {
-      icons[index].style.opacity = '1';
-    })
-    tag.addEventListener('mouseout', () => {
-      icons[index].style.opacity = '0.3';
-    })
-  });
+	tags.forEach((tag, index) => {
+		tag.addEventListener('mouseover', () => {
+			icons[index].style.opacity = '1';
+		})
+		tag.addEventListener('mouseout', () => {
+			icons[index].style.opacity = '0.3';
+		})
+	});
 }
 
 function initButtons() {
@@ -70,12 +76,11 @@ function initSelect() {
 }
 
 function triggerBurgerMenu() {
-    const body = document.querySelector('body');
-    const bm = document.querySelector('.bm__outer');
-
-    bm.addEventListener('click', function() {
-        body.classList.toggle('bmIsOpen');
-    });
+	const body = document.querySelector('body');
+	const bm = document.querySelector('.bm__outer');
+	bm.addEventListener('click', function () {
+		body.classList.toggle('bmIsOpen');
+	});
 }
 
 if (!isLg()) {
