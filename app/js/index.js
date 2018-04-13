@@ -41,37 +41,38 @@ function hoverIcon() {
 }
 
 function initButtons() {
-	const publics = document.getElementById('public');
-	const kids = document.getElementById('kids');
-	const enseignants = document.getElementById('enseignants');
+  const publics = document.getElementById('public') || null;
+  const kids = document.getElementById('kids') || null;
+  const enseignants = document.getElementById('enseignants') || null;
 
-	publics.addEventListener('click', () => {
-		window.location.pathname = "/index.html";
-	})
-	kids.addEventListener('click', () => {
-		window.location.pathname = "/kids.html";
-	})
-	enseignants.addEventListener('click', () => {
-		window.location.pathname = "/teachers.html";
-	})
+  publics && (publics.addEventListener('click', () => {
+    window.location.pathname = "/index.html";
+  }))
+  kids && (kids.addEventListener('click', () => {
+    window.location.pathname = "/kids.html";
+  }))
+  enseignants && (enseignants.addEventListener('click', () => {
+    window.location.pathname = "/teachers.html";
+  }))
 }
 
 function initSelect() {
-	const select = document.getElementById('target');
-	const selectButton = document.querySelector('.landing-button');
+  const select = document.getElementById('target');
+  const selectButton = document.getElementById('goToZone') || null;
 
-	selectButton.addEventListener('click', () => {
-		const value = select.value;
+  if(selectButton) {
+    selectButton.addEventListener('click', () => {
+      const value = select.value;
 
-		if (value === 'enfant') {
-			window.location.pathname = '/kids.html';
-		} else if (value === 'enseignant') {
-			window.location.pathname = '/teachers.html';
-		} else if (value === 'parent') {
-			window.location.pathname = '/index.html';
-		}
-
-	})
+      if(value === 'enfant') {
+        window.location.pathname = '/kids.html';
+      } else if (value === 'enseignant') {
+        window.location.pathname = '/teachers.html';
+      } else if (value === 'parent') {
+        window.location.pathname = '/index.html';
+      }
+    })
+  }
 }
 
 function triggerBurgerMenu() {
@@ -82,10 +83,10 @@ function triggerBurgerMenu() {
 	});
 }
 
-if (!isLg) {
-	triggerBurgerMenu();
-	initSelect();
-} else {
-	initButtons();
-	hoverIcon();
+if (!isLg()) {
+  triggerBurgerMenu();
+  initSelect();
+}else {
+  hoverIcon();
 }
+initButtons();
