@@ -30,13 +30,11 @@
 }
 
 .s-support__headline {
-    max-width: 300px;
-    margin: 2rem auto 4rem auto;
     text-align: center;
+    padding: 0 25px 50px;
 
-    @include bp("tablet") {
-        width: 80%;
-        max-width: 450px;
+    @include bp("desktop") {
+      padding: 0 50px 70px;
     }
 }
 
