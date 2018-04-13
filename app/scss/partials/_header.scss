@@ -162,6 +162,7 @@
     @include bp("tablet") {
         display: inline;
         margin: 0 5px;
+        height: auto;
         a {
             @include text(Helvetica, 18px, 300, normal, normal, auto, auto, auto);
         }
