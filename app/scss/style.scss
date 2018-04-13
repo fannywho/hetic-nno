@@ -48,9 +48,13 @@ table {
    border-spacing: 0;
 }
 
+@import 'partials/settings';
 @import 'partials/colors';
 @import 'partials/breakpoints';
 @import 'partials/common';
+
+@import 'partials/header';
+
 @import 'partials/landing';
 @import 'partials/form';
 @import 'partials/sections/_reassurance';

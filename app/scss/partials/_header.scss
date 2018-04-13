@@ -1,0 +1,224 @@
+/**
+ * STATE
+ **/
+
+body.bmIsOpen {
+    overflow: hidden;
+    .header {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #fffabf;
+        z-index: 222;
+    }
+
+    .nav__wrapper {
+        height: 85vh;
+        top: 3rem;
+    }
+    .nav__links {
+        flex-direction: column;
+    }
+
+    .nav__logo-outer {
+        padding: 1rem 1.5rem 0 1.5rem;
+    }
+
+    // BURGER MENU
+
+    .bm__line:first-child {
+        transform: rotate(45deg);
+        top: initial;
+        bottom: 10px;
+    }
+
+    .bm__line:last-child {
+        transform: rotate(-45deg);
+        top: initial;
+        bottom: 10px;
+    }
+
+    .bm__line:nth-child(2) {
+        display: none;
+    }
+}
+
+body:not(.bmIsOpen) {
+    .nav__links-outer {
+        display: none;
+    }
+}
+
+
+.nav__wrapper {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: $mainWidth;
+    max-width: $maxWidth;
+    margin: auto;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    background-color: $basicWhite;
+    z-index: 666;
+
+    @include bp("tablet") {
+        justify-content: space-evenly;
+        flex-direction: row;
+        top: 1rem;
+    }
+}
+
+/**
+ * LOGO
+ **/
+
+.nav__logo-outer {
+    display: flex;
+    height: 25%;
+    padding: 10px 20px;
+}
+
+
+.nav__logo,
+.burger-menu {
+    width: 30px;
+    display: inline-flex;
+    @include bp("desktop") {
+        width: 50px;
+        cursor: pointer;
+    }
+}
+
+.nav__logo {
+    width: 50px;
+}
+
+/**
+ * NAV BAR OUTER
+ **/
+
+.nav__links-outer {
+    height: 75%;
+
+    @include bp("desktop") {
+        padding: 25px 40px;
+    }
+    &.mobile-hidden {
+        display: none;
+        @include bp("desktop") {
+            display: flex;
+        }
+    }
+    &.desktop-hidden {
+        display: flex;
+        @include bp("desktop") {
+            display: none;
+        }
+    }
+
+    @include bp("tablet") {
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+        height: 35px;
+    }
+}
+
+.nav__links {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+
+    @include bp("tablet") {
+        width: 100%;
+        justify-content: space-between;
+    } 
+}
+
+.nav__link {
+    display: block;
+    margin-bottom: 1.5rem;
+
+    a {
+        text-decoration: none;
+        color: $basicBlack;
+        @include text(Helvetica, 26px, 300, normal, normal, auto, auto, auto);
+
+        &.active {
+            font-weight: bold;
+        }
+    }
+
+    @include bp("tablet") {
+        display: inline;
+        margin: 0 5px;
+        a {
+            @include text(Helvetica, 18px, 300, normal, normal, auto, auto, auto);
+        }
+    }
+}
+
+.nav__title {
+    display: block;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    color: #ffae2a;
+
+    @include bp("tablet") {
+        display: none;
+    }
+}
+
+.nav__link--highlighted {
+    @include bp-max("tablet") {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff78f;
+        padding: .85rem 0;
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * BURGER MENU
+ **/
+
+.bm__outer {
+    position: absolute;
+    top: 18.5px;
+    right: 25px;
+}
+
+.bm {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    @include bp("tablet") {
+        display: none;
+    }
+}
+
+.bm__line {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    top: 0;
+    background: $basicBlack;
+    border-radius: 100px;
+
+    &:nth-child(2) {
+        top: 50%;
+    }
+
+    &:nth-child(3) {
+        top: 100%;
+    }
+}
