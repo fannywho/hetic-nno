@@ -1,4 +1,5 @@
 import './slider';
+import './Game/index.js';
 
 let windowWidth = 0;
 let isLg = false;
