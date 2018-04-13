@@ -1,0 +1,103 @@
+.s-support {
+    display: block;
+    position: relative;
+    padding-top: 1rem;
+    overflow: hidden;
+    &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        z-index: -1;
+        background: $basicWhite;
+    }
+}
+
+.s-support__inner {
+    max-width: 90%;
+    margin: 0 auto;
+
+    @include bp("desktop") {
+        width: 80%;
+        max-width: 1220px;
+    }
+}
+
+.s-support__headline {
+    max-width: 300px;
+    margin: 2rem auto 3rem auto;
+    text-align: center;
+
+    @include bp("desktop") {
+        width: 55%;
+        max-width: 9999px;
+    }
+}
+
+.support-cards {
+    display: flex;
+    justify-content: space-between;
+
+    @include bp-max("tablet") {
+        align-items: center;
+        margin-left: -50%;
+        margin-right: -40%;
+    }
+
+}
+
+.support-card {
+    display: flex;
+    flex-direction: column;
+
+    @include bp-max("tablet") {
+        flex-shrink: 0;
+        &:not(.active) {
+            opacity: .25;
+            width: 30%;
+        }
+
+        &.active {
+            width: 40%;
+            margin: 0 2.5%;
+        }
+    }
+
+    @include bp("tablet") {
+        width: 30%;
+
+        &:nth-child(2) {
+            width: 30%;
+        }
+    }
+}
+
+.support-card__img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+
+    @include bp("tablet") {
+        margin-bottom: 2rem;
+    }
+}
+
+.support-card--headline {
+    @include text(Helvetica, 16px, none, none, none, 22px, auto, left);
+    margin-bottom: .85rem;
+    @include bp("desktop") {
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+
+.support-card__caption {
+    @extend .text-normal;
+    font-size: 14px;
+    text-align: left;
+}

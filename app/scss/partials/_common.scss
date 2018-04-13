@@ -76,27 +76,22 @@
   }
 }
 
-//9
 .themes-icon{
   opacity: 0.5;
 }
 
-//7
 .reassurance-box-yellow{
   @include box(#ffe852, 473px, 391px)
 }
 
-//8
 .reassurance-box-orange{
   @include box(#ffae2a, 473px, 391px)
 }
 
-//25
 .text-normal{
   @include text(Helvetica, 18px, 300, normal, normal, 1.44, 0px, center)
 }
 
-//17
 .contact-form{
   width: 80%;
   margin: 0 auto;
@@ -169,23 +164,6 @@
   }
 }
 
-
-//19
-.contact-form--input{
-  @include text(Helvetica, 14px, 300, normal, normal, normal, 0px, left);
-  color: #b4b4b4;
-  @include bp('desktop') {
-    font-size: 18px;
-  }
-}
-
-//20
-.contact-form--textarea{
-  @include text(Helvetica, 14px, 300, normal, normal, 1.43px, 0px, left);
-}
-
-
-//16
 .footer-message{
   @include text(ArialRoundedMT, 12px, bold, normal, normal, normal, 0px, center);
   color: #303030;
