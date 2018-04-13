@@ -1,0 +1,12 @@
+@import '../_common';
+
+.reassurance {
+  width: 90%;
+  margin: 0 auto;
+  @include bp('desktop') {
+    width: 80%;
+  }
+  &__title {
+
+  }
+}
