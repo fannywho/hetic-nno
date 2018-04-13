@@ -2,53 +2,56 @@
  * STATE
  **/
 
-body.bmIsOpen {
-    overflow: hidden;
-    .header {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background: #fffabf;
-        z-index: 222;
+
+@include bp-max("tablet") {
+    body.bmIsOpen {
+        overflow: hidden;
+        .header {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: #fffabf;
+            z-index: 222;
+        }
+    
+        .nav__wrapper {
+            height: 85vh;
+            top: 3rem;
+        }
+        .nav__links {
+            flex-direction: column;
+        }
+    
+        .nav__logo-outer {
+            padding: 1rem 1.5rem 0 1.5rem;
+        }
+    
+        // BURGER MENU
+    
+        .bm__line:first-child {
+            transform: rotate(45deg);
+            top: initial;
+            bottom: 10px;
+        }
+    
+        .bm__line:last-child {
+            transform: rotate(-45deg);
+            top: initial;
+            bottom: 10px;
+        }
+    
+        .bm__line:nth-child(2) {
+            display: none;
+        }
     }
 
-    .nav__wrapper {
-        height: 85vh;
-        top: 3rem;
+    body:not(.bmIsOpen) {
+        .nav__links-outer {
+            display: none;
+        }
     }
-    .nav__links {
-        flex-direction: column;
-    }
-
-    .nav__logo-outer {
-        padding: 1rem 1.5rem 0 1.5rem;
-    }
-
-    // BURGER MENU
-
-    .bm__line:first-child {
-        transform: rotate(45deg);
-        top: initial;
-        bottom: 10px;
-    }
-
-    .bm__line:last-child {
-        transform: rotate(-45deg);
-        top: initial;
-        bottom: 10px;
-    }
-
-    .bm__line:nth-child(2) {
-        display: none;
-    }
+    
 }
-
-body:not(.bmIsOpen) {
-    .nav__links-outer {
-        display: none;
-    }
-}
-
 
 .nav__wrapper {
     position: fixed;
@@ -64,7 +67,8 @@ body:not(.bmIsOpen) {
     z-index: 666;
 
     @include bp("tablet") {
-        justify-content: space-evenly;
+        align-items: center;
+        justify-content: space-between;
         flex-direction: row;
         top: 1rem;
     }
@@ -123,7 +127,6 @@ body:not(.bmIsOpen) {
         flex-direction: row;
         justify-content: space-between;
         padding: 15px 20px;
-        height: 35px;
     }
 }
 
