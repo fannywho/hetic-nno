@@ -80,23 +80,6 @@
   opacity: 0.5;
 }
 
-.support-card {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  @include bp("desktop") {
-    width: 25%;
-  }
-}
-
-.support-card--headline{
-  @include text(Helvetica, 12px, none, none, none, 16px, auto, left);
-  @include bp("desktop") {
-    font-size: 22px;
-    line-height: 38px;
-  }
-}
-
 .reassurance-box-yellow{
   @include box(#ffe852, 473px, 391px)
 }
