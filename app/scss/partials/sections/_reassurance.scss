@@ -79,6 +79,7 @@
     }
   }
   &__text {
+    max-width: 300px;
     @include text(Helvetica, 16px, 300, normal, normal, 1.5, 0px, center);
   }
   &__redirection {
