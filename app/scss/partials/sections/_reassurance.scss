@@ -47,4 +47,9 @@
   &__text {
     @include text(Helvetica, 16px, 300, normal, normal, 1.5, 0px, center);
   }
+  &__redirection {
+    margin-top: 20px;
+    @include text(Helvetica, 18px, bold, normal, normal, normal, 0px, center);
+    color: white;
+  }
 }

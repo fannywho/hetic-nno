@@ -29,10 +29,6 @@ time, mark, audio, video {
    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-   display: block;
-}
 body {
    line-height: 1;
 }
@@ -54,8 +50,8 @@ table {
 
 @import 'partials/colors';
 @import 'partials/breakpoints';
-@import 'partials/reset';
 @import 'partials/common';
+@import 'partials/landing';
 @import 'partials/form';
-@import 'partials/sections/_s-support';
 @import 'partials/sections/_reassurance';
+@import 'partials/s-support';
