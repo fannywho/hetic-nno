@@ -79,29 +79,49 @@
 
 
 <!-- Form  -->
-<section class="s-support">
-        <div class="s-support__inner">
-            <h2 class="headline s-support__headline">Nullam id dolor id nibh ultricies vehicula ut id elit.</h2>
-    
-            <div class="support-cards">
-                <div class="support-card">
-                    <img src="./img/supports-visuels.jpg" class="support-card__img" alt="">
-                    <h3 class="support-card--headline">Intégrer les logiques de programmation de base grâce aux serious game</h3>
-                    <span class="support-card__caption">Serious game « Blabla »</span>
-                </div>
-                <div class="support-card active">
-                    <img src="./img/supports-ateliers.jpg" class="support-card__img" alt="">
-                    <h3 class="support-card--headline">Comprendre l’impact de leurs actions en ligne à travers des ateliers de jeux ou de débats</h3>
-                    <span class="support-card__caption">Atelier « blabla » à Marcel Sembat</span>
-                </div>
-                <div class="support-card">
-                    <img src="./img/support-1.jpg" class="support-card__img" alt="">
-                    <h3 class="support-card--headline">Apprendre les bases de l’informatique simplement en s’appuyant sur des supports visuels synthétiques</h3>
-                    <span class="support-card__caption">Serious game « Blabla »</span>
-                </div>
-            </div>
+<section class='landing'>
+    <div class="landing-content">
+        <nav>
+            <a href="index.html">
+                <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
+            </a>
+            <img src="img/img-layout/menu.svg" class="burger-menu" alt="menu" />
+        </nav>
+        <h2 class="landing-title">
+            Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
+            Et vous, qui êtes vous ?
+            <select id="target">
+                <option value="parent">parent</option>
+                <option value="enseignant" selected>enseignant</option>
+                <option value="enfant">enfant</option>
+            </select>
+        </h2>
+        <button class="landing-button">c'est parti !</button>
+    </div>
+    <div class="landing-content--desktop">
+        <nav>
+            <a href="index.html">
+                <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
+            </a>
+            <ul class="nav-menu text-normal">
+                <li><a href="index.html">grand public</a></li>
+                <li class="active"><a href="teachers.html">enseignant</a></li>
+                <li><a href="kids.html">enfant</a></li>
+                <li><a href="#form">contact</a></li>
+            </ul>
+        </nav>
+        <h2 class="landing-title">
+            Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
+            Et vous, qui êtes vous ?
+        </h2>
+        <div class="landing-buttons">
+            <button class="landing-button landing-button--yellow">grand public</button>
+            <button class="landing-button landing-button--lightorange">enfant</button>
+            <button class="landing-button">enseignant</button>
         </div>
-    </section>
+    </div>
+</section>
+
 <section id="form">
     <div id="form__container">
         <form class="contact-form">
