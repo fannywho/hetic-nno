@@ -1,6 +1,33 @@
 // Liste des classes
 // (voir zeplin pour les numéros)
 
+// This mixin is used if you want to setup the text properties
+@mixin text($fontName, $fontSize, $fontWeight, $fontStyle, $fontStretch, $lineHeight, $letterSpacing, $align) {
+  font-family: $fontName;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  font-style: $fontStyle;
+  font-stretch: $fontStretch;
+  line-height:$lineHeight;
+  letter-spacing: $letterSpacing;
+  text-align: $align;
+}
+
+// This mixin is used for all the nodes which have a height, width, border-radius and a background-color
+@mixin item-rounded($width, $height, $borderRadius, $backgroundColor) {
+  width: $width;
+  height: $height;
+  border-radius: $borderRadius;
+  background-color: $backgroundColor;
+}
+
+// I mixed all the boxes which have a height, width and a background color
+@mixin box($backgroundColor, $width, $height) {
+  width: $width;
+  height: $height;
+  background-color: $backgroundColor
+}
+
 //2
 .headline{}
 
@@ -40,34 +67,75 @@
 //4
 .support-card--headline{}
 
-//6
-// I mixed all the boxes which have a height, width and a background color
-@mixin box($backgroundColor, $width, $height) {
-  width: $width;
-  height: $height;
-  background-color: $backgroundColor
+
+//7
+.reassurance-box-yellow{
+  @include box(#ffe852, 473px, 391px)
 }
+
+//8
+.reassurance-box-orange{
+  @include box(#ffae2a, 473px, 391px)
+}
+
 //25
-// This mixin is used if you want to setup the text properties
-@mixin text($width, $height, $fontName, $fontSize, $fontWeight, $fontStyle, $fontStretch, $lineHeight, $letterSpacing, $align) {
-  width: $width;
-  height: $height;
-  font-family: $fontName;
-  font-size: $fontSize;
-  font-weight: $fontWeight;
-  font-style: $fontStyle;
-  font-stretch: $fontStretch;
-  line-height:$lineHeight;
-  letter-spacing: $letterSpacing;
-  text-align: $align;
+.text-normal{
+  @include text(Helvetica, 18px, 300, normal, normal, 1.44, 0px, center)
+}
+
+//17
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  @include bp('desktop') {
+    flex-direction: row;
+  }
+  &__inputs {
+    flex-direction: column;
+  }
+  &__text-area {
+    flex-direction: column;
+  }
+}
+
+//18
+.contact-form--label{
+  @include text(Helvetica, 12px, normal, normal, normal, normal, 0px, left);
+  color: #303030;
+  @include bp('desktop') {
+    font-size: 16px;
+  }
+}
+
+//19
+.contact-form--input{
+  @include text(Helvetica, 14px, 300, normal, normal, normal, 0px, left);
+  color: #b4b4b4;
+  @include bp('desktop') {
+    font-size: 18px;
+  }
+}
+
+//20
+.contact-form--textarea{
+  @include text(Helvetica, 14px, 300, normal, normal, 1.43px, 0px, left);
 }
 
 //21
-// This mixin is used for all the nodes which have a height, width, border-radius and a background-color
-@mixin item-rounded($width, $height, $borderRadius, $backgroundColor){
-  width: $width;
-  height: $height;
-  border-radius: $borderRadius;
-  background-color: $backgroundColor;
+.contact-form--button{
+  @include item-rounded(264px, 42px, 21px, #303030);
+  @include bp('desktop') {
+    @include item-rounded(473px, 58px, 29px, #303030);
+  }
 }
+
+//16
+.footer-message{
+  @include text(ArialRoundedMT, 12px, bold, normal, normal, normal, 0px, center);
+  color: #303030;
+  @include bp('desktop') {
+    font-size: 14px;
+  }
+}
+
 
