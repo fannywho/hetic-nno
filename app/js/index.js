@@ -10,9 +10,11 @@ window.addEventListener('resize', () => {
 	isLg = windowWidth >= 992;
 });
 
-contactLink.addEventListener('click', () => {
-	document.querySelector('body').classList.toggle('bmIsOpen');
-});
+if (contactLink) {
+	contactLink.addEventListener('click', () => {
+		document.querySelector('body').classList.toggle('bmIsOpen');
+	});
+}
 
 function hoverIcon() {
 	const itSecurity = document.querySelector('.themes-label--itSecurity');
@@ -83,7 +85,7 @@ function triggerBurgerMenu() {
 	});
 }
 
-if (!isLg()) {
+if (!isLg) {
   triggerBurgerMenu();
   initSelect();
 }else {
