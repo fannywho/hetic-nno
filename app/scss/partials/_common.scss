@@ -1,5 +1,7 @@
 // Liste des classes
 // (voir zeplin pour les numéros)
+@import './_breakpoints';
+
 
 // This mixin is used if you want to setup the text properties
 @mixin text($fontName, $fontSize, $fontWeight, $fontStyle, $fontStretch, $lineHeight, $letterSpacing, $align) {
