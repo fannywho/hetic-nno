@@ -1,6 +1,3 @@
-@import 'partials/colors';
-@import 'partials/common';
-
 @font-face {
    font-family: ArialRoundedBold;
    src: url(../fonts/ArialRoundedBold.ttf);
@@ -10,3 +7,6 @@
    font-family: Helvetica;
    src: url(../fonts/Helvetica-01.ttf);
 }
+
+@import 'partials/colors';
+@import 'partials/common';
