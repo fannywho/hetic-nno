@@ -1,6 +1,32 @@
+/**
+ * MAX WIDTH BREAKPOINT 
+**/
+@mixin bp-max($breakpoint) {
+  @if $breakpoint == "desktop" {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == "tablet" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
+/**
+ * MIN WIDTH BREAKPOINT
+**/
 @mixin bp($breakpoint) {
   @if $breakpoint == "mobile" {
     @media (min-width: 320px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "tablet" {
+    @media (min-width: 768px) {
       @content;
     }
   }
