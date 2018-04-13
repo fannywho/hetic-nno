@@ -1,3 +1,5 @@
+import './slider';
+
 function isLg() {
   if (window.innerWidth >= 992) {
     return true;
