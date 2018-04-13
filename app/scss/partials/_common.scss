@@ -133,10 +133,11 @@
   }
   &__input {
     @include item-rounded(264px, 38px, 4px, white);
-    @include text(Helvetica, 18px, 300, normal, normal, normal, 1.5px, left);
+    @include text(Helvetica, 14px, 300, normal, normal, normal, 0, left);
     border: none;
     padding-left: 20px;
     @include bp('desktop') {
+      font-size: 18px;
       height: 50px;
     }
     &::placeholder {
@@ -152,12 +153,13 @@
   }
   &__textarea {
     @include item-rounded(264px, 128px, 4px, white);
-    @include text(Helvetica, 18px, 300, normal, normal, 1.5px, 0px, left);
+    @include text(Helvetica, 14px, 300, normal, normal, 1.5px, 0px, left);
     border: none;
     resize: none;
     outline: none;
     padding: 26px;
     @include bp('desktop') {
+      font-size: 18px;
       width: 100%;
       height: 220px;
     }
