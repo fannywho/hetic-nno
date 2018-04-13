@@ -7,7 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 </head>
 <body>
-<span>Hello World !</span>
+<section class='landing'>
+  <div class="landing-content">
+    <nav>
+      <a href="index.html">
+        <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
+      </a>
+      <img src="img/img-layout/menu.svg" class="burger-menu" alt="menu" />
+    </nav>
+    <h2 class="landing-title">
+      Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
+      Et vous, qui êtes vous ?
+      <select id="target">
+        <option value="parent">parent</option>
+        <option value="enseignant" selected>enseignant</option>
+        <option value="enfant">enfant</option>
+      </select>
+    </h2>
+    <button class="landing-button">c'est parti !</button>
+  </div>
+  <div class="landing-content--desktop">
+    <nav>
+      <a href="index.html">
+        <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
+      </a>
+      <ul class="nav-menu text-normal">
+        <li class="active"><a href="index.html">grand public</a></li>
+        <li><a href="teachers.html">enseignant</a></li>
+        <li><a href="kids.html">enfant</a></li>
+        <li><a href="#form">contact</a></li>
+      </ul>
+    </nav>
+    <h2 class="landing-title">
+      Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
+      Et vous, qui êtes vous ?
+    </h2>
+    <div class="landing-buttons">
+      <button class="landing-button landing-button--yellow">grand public</button>
+      <button class="landing-button landing-button--lightorange">enfant</button>
+      <button class="landing-button">enseignant</button>
+    </div>
+  </div>
+</section>
 <section class="s-support">
     <div class="s-support__inner">
         <h2 class="headline s-support__headline">Nullam id dolor id nibh ultricies vehicula ut id elit.</h2>
