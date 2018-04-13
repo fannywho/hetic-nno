@@ -24,4 +24,21 @@ function hoverIcon() {
   });
 }
 
+function initButtons() {
+  const publics = document.getElementById('public');
+  const kids = document.getElementById('kids');
+  const enseignants = document.getElementById('enseignants');
+
+  publics.addEventListener('click', () => {
+    window.location.pathname = "/index.html";
+  })
+  kids.addEventListener('click', () => {
+    window.location.pathname = "/kids.html";
+  })
+  enseignants.addEventListener('click', () => {
+    window.location.pathname = "/teachers.html";
+  })
+}
+
 hoverIcon();
+initButtons();
