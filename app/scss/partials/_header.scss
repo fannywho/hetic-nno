@@ -16,7 +16,7 @@
     
         .nav__wrapper {
             height: 85vh;
-            top: 3rem;
+            top: 1.5rem;
         }
         .nav__links {
             flex-direction: column;
@@ -146,6 +146,8 @@
 .nav__link {
     display: block;
     margin-bottom: 1.5rem;
+    // quick fix because not understable bug
+    height: 25px;
 
     a {
         text-decoration: none;
@@ -171,6 +173,9 @@
     margin-bottom: 1rem;
     padding-top: 2rem;
     color: #ffae2a;
+    // quick fix
+    height: 20px;
+    margin-bottom: 2rem;
 
     @include bp("tablet") {
         display: none;
@@ -186,6 +191,9 @@
         background: #fff78f;
         padding: .85rem 0;
         margin-bottom: 0;
+        // quick fix because not understable bug
+        height: auto;
+        padding: 2rem 0;
     }
 }
 

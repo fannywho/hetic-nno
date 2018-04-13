@@ -40,5 +40,15 @@ function initButtons() {
   })
 }
 
+function triggerBurgerMenu() {
+    const body = document.querySelector('body');
+    const bm = document.querySelector('.bm__outer');
+
+    bm.addEventListener('click', function() {
+        body.classList.toggle('bmIsOpen');
+    });
+}
+
+triggerBurgerMenu();
 hoverIcon();
 initButtons();
