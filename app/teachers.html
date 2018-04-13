@@ -7,47 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 </head>
 <body>
-<section class='landing'>
-    <div class="landing-content">
-        <nav>
-            <a href="index.html">
-                <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
-            </a>
-            <img src="img/img-layout/menu.svg" class="burger-menu" alt="menu" />
-        </nav>
-        <h2 class="landing-title">
-            Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
-            Et vous, qui êtes vous ?
-            <select id="target">
-                <option value="parent">parent</option>
-                <option value="enseignant" selected>enseignant</option>
-                <option value="enfant">enfant</option>
-            </select>
-        </h2>
-        <button class="landing-button">c'est parti !</button>
-    </div>
-    <div class="landing-content--desktop">
-        <nav>
-            <a href="index.html">
-                <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
-            </a>
-            <ul class="nav-menu text-normal">
-                <li><a href="index.html">grand public</a></li>
-                <li class="active"><a href="teachers.html">enseignant</a></li>
-                <li><a href="kids.html">enfant</a></li>
-                <li><a href="#form">contact</a></li>
-            </ul>
-        </nav>
-        <h2 class="landing-title">
-            Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
-            Et vous, qui êtes vous ?
-        </h2>
-        <div class="landing-buttons">
-          <button class="landing-button landing-button--yellow" id="public">grand public</button>
-          <button class="landing-button landing-button--lightorange" id="kids">enfant</button>
-          <button class="landing-button" id="enseignants">enseignant</button>
+  <header class="header">
+    <div class="nav__wrapper">
+      <h1 class="nav__logo-outer">
+        <a href="index.html">
+          <img src="img/img-layout/logo.svg" class="nav__logo" alt="NNO" />
+        </a>
+      </h1>
+      <nav class="nav__links-outer">
+        <ul class="nav__links text-normal">
+          <li class="nav__title">nos différents espaces</li>
+          <li class="nav__link active">
+            <a href="index.html">grand public</a>
+          </li>
+          <li class="nav__link">
+            <a href="teachers.html" class="active">enseignant</a>
+          </li>
+          <li class="nav__link">
+            <a href="kids.html">enfant</a>
+          </li>
+          <li class="nav__link nav__link--highlighted">
+            <a href="#form">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="bm__outer">
+          <div class="bm">
+            <span class="bm__line"></span>
+            <span class="bm__line"></span>
+            <span class="bm__line"></span>
+          </div>
         </div>
     </div>
+  </header>
+  <section class="landing">
+    <div class="landing-content">
+      <h2 class="landing-title">
+        Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique ! Et vous, qui êtes vous ?
+        <select id="target">
+          <option value="parent">parent</option>
+          <option value="enseignant" selected>enseignant</option>
+          <option value="enfant">enfant</option>
+        </select>
+      </h2>
+      <button class="landing-button">c'est parti !</button>
+    </div>
+    <div class="landing-content--desktop">
+      <h2 class="landing-title">
+        Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique ! Et vous, qui êtes vous ?
+      </h2>
+      <div class="landing-buttons">
+        <button class="landing-button landing-button--yellow" id="public">grand public</button>
+        <button class="landing-button landing-button--lightorange" id="kids">enfant</button>
+        <button class="landing-button" id="enseignants">enseignant</button>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- introduction -->
 <section class="introduction">
