@@ -22,17 +22,9 @@
 .s-support__inner {
     max-width: 90%;
     margin: 0 auto;
-    transform: translateX(0);
-    transition: all 0.5s ease;
     @include bp("desktop") {
         width: 80%;
         max-width: 1220px;
-    }
-    &--transition-enter {
-        transform: translateX(-100%);
-    }
-    &--transition-leave {
-        transform: translateX(100%);
     }
 }
 
@@ -41,14 +33,15 @@
     padding: 0 25px 50px;
 
     @include bp("desktop") {
-      padding: 0 50px 70px;
+        padding: 0 50px 70px;
     }
 }
 
 .support-cards {
     display: flex;
     justify-content: space-between;
-
+    transform: translateX(0);
+    transition: all .5s ease;
     @include bp-max("tablet") {
         align-items: center;
         margin-left: -50%;
@@ -76,7 +69,8 @@
 
     @include bp("tablet") {
         width: 30%;
-        :nth-child(2) {
+
+        &:nth-child(2) {
             width: 30%;
         }
     }

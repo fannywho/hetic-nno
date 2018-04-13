@@ -1,6 +1,6 @@
 const supportCardList = document.querySelectorAll('.support-card');
 const length = supportCardList.length;
-const supportCard = document.querySelector('.s-support__inner');
+const supportCard = document.querySelector('.support-cards');
 let sliderIndex = 1;
 let windowWidth = 0;
 
@@ -16,7 +16,7 @@ function goSlide(e) {
 		if (this.getAttribute('data-start') > e.changedTouches[0].clientX) {
 			if (sliderIndex < length) {
 				if (sliderIndex === 1) {
-					supportCard.style.transform = 'translateX(-50%)';
+					supportCard.style.transform = 'translateX(-192px)';
 				} else {
 					supportCard.style.transform = 'translateX(-10px)';
 				}
@@ -25,7 +25,7 @@ function goSlide(e) {
 		} else if (this.getAttribute('data-start') < e.changedTouches[0].clientX) {
 			if (sliderIndex > 0) {
 				if (sliderIndex === 1) {
-					supportCard.style.transform = 'translateX(50%)';
+					supportCard.style.transform = 'translateX(192px)';
 				} else {
 					supportCard.style.transform = 'translateX(10px)';
 				}
