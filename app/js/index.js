@@ -48,6 +48,22 @@ function initButtons() {
   })
 }
 
+function initSelect() {
+  const select = document.getElementById('target');
+
+  select.addEventListener('change',() => {
+    const value = select.value;
+
+    if(value === 'enfant') {
+      window.location.pathname = '/kids.html';
+    } else if (value === 'enseignant') {
+      window.location.pathname = '/teachers.html';
+    } else if (value === 'parent') {
+      window.location.pathname = '/index.html';
+    }
+  });
+}
+
 function triggerBurgerMenu() {
     const body = document.querySelector('body');
     const bm = document.querySelector('.bm__outer');
@@ -59,7 +75,8 @@ function triggerBurgerMenu() {
 
 if (!isLg()) {
   triggerBurgerMenu();
-} else {
+  initSelect();
+}else {
   initButtons();
-  hoverIcon(); 
+  hoverIcon();
 }
