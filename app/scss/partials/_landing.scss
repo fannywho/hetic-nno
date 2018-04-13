@@ -1,0 +1,157 @@
+.landing {
+  background-color: #fffabf;
+  padding: 30px 0 50px;
+
+  @include bp("desktop") {
+    padding-bottom: 100px;
+  }
+}
+
+.landing-content {
+  width: 80%;
+  margin: 0 auto;
+
+  @include bp("desktop") {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+    @include bp("desktop") {
+      display: block;
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.landing-content-kids {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 100vh;
+  @include bp("desktop") {
+    text-align: center;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  padding: 5px 10px;
+  background-color: $basicWhite;
+
+  @include bp("desktop") {
+    padding: 40px 40px;
+  }
+
+  &.mobile-hidden {
+    display: none;
+    @include bp("desktop") {
+      display: flex;
+    }
+  }
+
+  &.desktop-hidden {
+    display: flex;
+    @include bp("desktop") {
+      display: none;
+    }
+  }
+}
+
+.logo, .burger-menu {
+  width: 30px;
+  display: inline-flex;
+  @include bp("desktop") {
+    width: 50px;
+    cursor: pointer;
+  }
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  max-width: 600px;
+
+  li {
+    display: inline;
+    margin: 0 5px;
+    @include text(Helvetica, 18px, normal, normal, normal, auto, auto, auto);
+
+    & a {
+      text-decoration: none;
+      color: $basicBlack;
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+.landing-title {
+  font-family: Helvetica;
+  font-size: 26px;
+  font-weight: 200;
+  line-height: 33px;
+  padding: 50px 10px;
+  color: $basicBlack;
+
+  @include bp("desktop") {
+    font-size: 56px;
+    line-height: 60px;
+    padding: 100px 50px;
+  }
+
+  & select {
+    background-color: $backgroundYellow;
+    border: 0;
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
+.landing-buttons {
+  display: flex;
+  flex-direction: row;
+  max-width: 780px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.landing-button {
+  @include text(ArialRoundedBold, 18px, normal, normal, normal, auto, auto, auto);
+  @include item-rounded(auto, auto, 20px, $reassuranceOrange);
+  padding: 5px 20px;
+  outline: 0;
+  border-style: none;
+  color: #fff;
+
+  @include bp("desktop") {
+    font-size: 38px;
+    padding: 5px 25px;
+    &--lightorange {
+      background-color: #f9d35f;
+      &:hover {
+        box-shadow: 0px 8px 0px 0px rgba(240,198,70,1)!important;
+      }
+    }
+    &--yellow {
+      background-color: $reassuranceYellow;
+      &:hover {
+        box-shadow: 0px 8px 0px 0px rgba(255,211,1,1)!important;
+      }
+    }
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0px 8px 0px 0px rgba(241,150,0,1);
+    }
+  }
+}
