@@ -101,26 +101,29 @@
 <!-- Form  -->
 
 <section id="form">
-    <form class="contact-form">
-        <h2 class="headline contact-form__title">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </h2>
-        <div class="contact-form__container">
-            <div class="contact-form__primary">
-                <label for="name" class="contact-form__label">Votre prénom et nom</label>
-                <input id="name" class="contact-form__input">
-                <label for="email" class="contact-form__label">Votre adresse mail</label>
-                <input id="email" class="contact-form__input">
-                <label for="object" class="contact-form__label">Objet de votre message</label>
-                <input id="object" class="contact-form__input">
+    <div id="form__container">
+        <form class="contact-form">
+            <h2 class="headline contact-form__title">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </h2>
+            <div class="contact-form__container">
+                <div class="contact-form__primary">
+                    <label for="name" class="contact-form__label">Votre prénom et nom</label>
+                    <input id="name" class="contact-form__input" placeholder="Prénom nom">
+                    <label for="email" class="contact-form__label">Votre adresse mail</label>
+                    <input id="email" class="contact-form__input" placeholder="Adresse mail">
+                    <label for="object" class="contact-form__label">Objet de votre message</label>
+                    <input id="object" class="contact-form__input" placeholder="Mon objet de message">
+                </div>
+                <div class="contact-form__secondary">
+                    <label for="message" class="contact-form__label">Contenu de votre message</label>
+                    <textarea id="message" class="contact-form__textarea"></textarea>
+                    <button type="submit" class="contact-form__button">Envoyez le message</button>
+                </div>
             </div>
-            <div class="contact-form__secondary">
-                <label for="message" class="contact-form__label">Contenu de votre message</label>
-                <textarea id="message" class="contact-form__textarea"></textarea>
-                <button type="submit" class="contact-form__button">Envoyez le message</button>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
+    <p id="form__foot">made with 💛 at hetic</p>
 </section>
 <span></span>
 </body>

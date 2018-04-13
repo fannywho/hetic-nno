@@ -89,7 +89,7 @@
 }
 
 .text-normal{
-  @include text(Helvetica, 18px, 300, normal, normal, 1.44, 0px, center)
+  @include text(Helvetica, 18px, 300, normal, normal, 1.44px, 0px, center)
 }
 
 .contact-form{
@@ -106,6 +106,7 @@
     display: flex;
     flex-direction: column;
     @include bp('desktop') {
+      width: 50%;
       margin-right: 136px;
     }
   }
@@ -113,6 +114,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    @include bp('desktop') {
+      width: 50%;
+    }
   }
   &__label {
     @include text(Helvetica, 12px, normal, normal, normal, normal, 0px, left);
@@ -132,24 +136,40 @@
     }
   }
   &__input {
-    @include item-rounded(264px, 38px, 4px, white);
+    @include item-rounded(100%, 38px, 4px, white);
+    @include text(Helvetica, 14px, 300, normal, normal, normal, 0, left);
     border: none;
+    padding-left: 20px;
+    @include bp('desktop') {
+      font-size: 18px;
+      height: 50px;
+    }
+    &::placeholder {
+      @include text(Helvetica, 14px, 300, normal, normal, normal, 0, left);
+      @include bp('desktop') {
+        font-size: 18px;
+      }
+      color: #b4b4b4;
+    }
     &:focus {
       outline: none;
     }
   }
   &__textarea {
-    @include item-rounded(264px, 128px, 4px, white);
+    @include item-rounded(100%, 128px, 4px, white);
+    @include text(Helvetica, 14px, 300, normal, normal, 1.5px, 0px, left);
     border: none;
     resize: none;
     outline: none;
+    padding: 26px;
     @include bp('desktop') {
+      font-size: 18px;
       width: 100%;
-      height: 185px;
+      height: 220px;
     }
   }
   &__button {
-    @include item-rounded(264px, 42px, 21px, #303030);
+    @include item-rounded(100%, 42px, 21px, #303030);
     @include bp('desktop') {
       @include item-rounded(100%, 58px, 29px, #303030);
       @include text(ArialRoundedBold, 20px, normal, normal, normal, normal, 0px, center)
