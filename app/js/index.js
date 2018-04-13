@@ -1,3 +1,11 @@
+function isLg() {
+  if (window.innerWidth >= 992) {
+    return true;
+  }
+
+  return false;
+}
+
 function hoverIcon() {
   const itSecurity = document.querySelector('.themes-label--itSecurity');
   const dataProtection = document.querySelector('.themes-label--dataProtection');
@@ -49,6 +57,9 @@ function triggerBurgerMenu() {
     });
 }
 
-triggerBurgerMenu();
-hoverIcon();
-initButtons();
+if (!isLg()) {
+  triggerBurgerMenu();
+} else {
+  initButtons();
+  hoverIcon(); 
+}
