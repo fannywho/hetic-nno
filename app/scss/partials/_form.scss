@@ -1,10 +1,22 @@
 @import './_common';
 
 #form {
+  position: relative;
   @include box(#ffd785, 100%, 734px);
   padding-top: 40px;
   @include bp('desktop') {
     height: 685px;
     padding-top: 90px;
+  }
+  &__foot {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include text(ArialRoundedBold, 12px, bold, normal, normal, normal, 0px, center);
+    @include bp('desktop') {
+      font-size: 14px;
+      bottom: 30px;
+    }
   }
 }
