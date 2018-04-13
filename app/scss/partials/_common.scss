@@ -38,6 +38,7 @@
 .themes-label--itSecurity{
   @include item-rounded(auto, auto, 20px, $itSecurity);
   color: $basicWhite;
+}
 
 .themes-label--dataProtection{
   @include item-rounded(auto, auto, 20px, $dataProtection);
@@ -75,27 +76,39 @@
   }
 }
 
-//9
 .themes-icon{
   opacity: 0.5;
 }
 
-//7
+.support-card {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  @include bp("desktop") {
+    width: 25%;
+  }
+}
+
+.support-card--headline{
+  @include text(Helvetica, 12px, none, none, none, 16px, auto, left);
+  @include bp("desktop") {
+    font-size: 22px;
+    line-height: 38px;
+  }
+}
+
 .reassurance-box-yellow{
   @include box(#ffe852, 473px, 391px)
 }
 
-//8
 .reassurance-box-orange{
   @include box(#ffae2a, 473px, 391px)
 }
 
-//25
 .text-normal{
   @include text(Helvetica, 18px, 300, normal, normal, 1.44, 0px, center)
 }
 
-//17
 .contact-form{
   display: flex;
   flex-direction: column;
@@ -110,7 +123,6 @@
   }
 }
 
-//18
 .contact-form--label{
   @include text(Helvetica, 12px, normal, normal, normal, normal, 0px, left);
   color: #303030;
@@ -119,7 +131,6 @@
   }
 }
 
-//19
 .contact-form--input{
   @include text(Helvetica, 14px, 300, normal, normal, normal, 0px, left);
   color: #b4b4b4;
@@ -128,12 +139,10 @@
   }
 }
 
-//20
 .contact-form--textarea{
   @include text(Helvetica, 14px, 300, normal, normal, 1.43px, 0px, left);
 }
 
-//21
 .contact-form--button{
   @include item-rounded(264px, 42px, 21px, #303030);
   @include bp('desktop') {
@@ -141,7 +150,6 @@
   }
 }
 
-//16
 .footer-message{
   @include text(ArialRoundedMT, 12px, bold, normal, normal, normal, 0px, center);
   color: #303030;
