@@ -13,4 +13,7 @@
 `npm run build`
 
 ### Url du projet en ligne
-... en attente
+http://nno.netlify.com/
+
+### Repo du jeu :D
+https://github.com/Zyigh/Game-js
