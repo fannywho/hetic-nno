@@ -30,7 +30,7 @@
   font-size: 18px;
   color: $basicBlack;
 
-  @include bp("desktop") {
+  @include bp("mobile") {
     font-size: 32px;
   }
 }

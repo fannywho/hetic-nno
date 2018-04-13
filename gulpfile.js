@@ -19,7 +19,7 @@ var isProd = process.env.NODE_ENV === 'production';
  */
 
 function templates() {
-  return gulp.src('app/index.html')
+  return gulp.src(['app/index.html', 'app/kids.html', 'app/teachers.html'])
     .pipe(gulp.dest('dist'))
     .pipe(sync.stream());
 }

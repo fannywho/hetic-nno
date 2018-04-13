@@ -7,31 +7,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 </head>
 <body>
-<span>Hello World !</span>
+<section class='landing'>
+  <div class="landing-content">
+    <nav>
+      <a href="index.html">
+        <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
+      </a>
+      <img src="img/img-layout/menu.svg" class="burger-menu" alt="menu" />
+    </nav>
+    <h2 class="landing-title">
+      Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
+      Et vous, qui êtes vous ?
+      <select id="target">
+        <option value="parent">parent</option>
+        <option value="enseignant" selected>enseignant</option>
+        <option value="enfant">enfant</option>
+      </select>
+    </h2>
+    <button class="landing-button">c'est parti !</button>
+  </div>
+  <div class="landing-content--desktop">
+    <nav>
+      <a href="index.html">
+        <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
+      </a>
+      <ul class="nav-menu text-normal">
+        <li class="active"><a href="index.html">grand public</a></li>
+        <li><a href="teachers.html">enseignant</a></li>
+        <li><a href="kids.html">enfant</a></li>
+        <li><a href="#form">contact</a></li>
+      </ul>
+    </nav>
+    <h2 class="landing-title">
+      Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
+      Et vous, qui êtes vous ?
+    </h2>
+    <div class="landing-buttons">
+      <button class="landing-button landing-button--yellow">grand public</button>
+      <button class="landing-button landing-button--lightorange">enfant</button>
+      <button class="landing-button">enseignant</button>
+    </div>
+  </div>
+</section>
+
+<!-- Support -->
 <section class="s-support">
     <div class="s-support__inner">
         <h2 class="headline s-support__headline">Nullam id dolor id nibh ultricies vehicula ut id elit.</h2>
 
         <div class="support-cards">
             <div class="support-card">
-                <img src="./img/support-1.jpg" class="support-card__img" alt="">
-                <h3 class="support-card--headline">Intégrer les logiques de programmation de base grâce aux serious game.</h3>
-                <span class="support-card__caption">Serious game « Blabla »</span>
+                <img src="./img/supports-visuels.jpg" class="support-card__img" alt="">
+                <h3 class="support-card--headline">Apprendre les bases de l’informatique simplement en s’appuyant sur des supports visuels synthétiques</h3>
+                <span class="support-card__caption">Infographies sur la circulation des données</span>
             </div>
             <div class="support-card active">
-                <img src="./img/support-1.jpg" class="support-card__img" alt="">
-                <h3 class="support-card--headline">Comprendre l’impact de leurs actions en ligne à travers des ateliers de jeux ou de débats.</h3>
-                <span class="support-card__caption">Atelier « blabla » à Marcel Sembat</span>
+                <img src="./img/supports-ateliers.jpg" class="support-card__img" alt="">
+                <h3 class="support-card--headline">Comprendre l’impact de leurs actions en ligne à travers des ateliers de jeux ou de débats</h3>
+                <span class="support-card__caption">Atelier « Comprendre les enjeux du numérique »</span>
             </div>
             <div class="support-card">
                 <img src="./img/support-1.jpg" class="support-card__img" alt="">
-                <h3 class="support-card--headline">Intégrer les logiques de programmation de base grâce aux serious game.</h3>
-                <span class="support-card__caption">Serious game « Blabla »</span>
+                <h3 class="support-card--headline">Intégrer les logiques de programmation de base grâce aux serious game</h3>
+                <span class="support-card__caption">Serious game sur la programmation</span>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Reassurance -->
+<section class="reassurance">
+    <h2 class="headline reassurance__title">
+        Sed posuere consectetur est at lobortis.
+    </h2>
+    <div class="reassurance__container">
+        <div class="reassurance__box reassurance__box--orange">
+            <img src="img/enseignement-profs.svg" class="reassurance__icon" alt="enseignement icon">
+            <p class="reassurance__text">Notre organisme accompagne les enseignants pour qu’ils dispensent la meilleure
+                formation possible à vos enfants.
+            </p>
+        </div>
+        <div class="reassurance__box reassurance__box--yellow">
+            <img src="img/education-nationale.png" class="reassurance__icon reassurance__icon--large"
+                 alt="logo education nationale">
+            <p class="reassurance__text">
+                Notre formation fait partie du programme officiel d’éducation civique d’enseignement primaire. Il sera
+                mis
+                en place dans les écoles pilotes dès la rentrée 2020.
+            </p>
+        </div>
+    </div>
+</section>
 <!-- Form  -->
+
 <section id="form">
     <div id="form__container">
         <form class="contact-form">
