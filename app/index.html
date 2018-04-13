@@ -1,53 +1,100 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>NNO - Programme de sensibilisation au numérique</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <title>NNO - Programme de sensibilisation au numérique</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 </head>
-<body>
-<section class='landing'>
-  <div class="landing-content">
-    <nav>
-      <a href="index.html">
-        <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
-      </a>
-      <img src="img/img-layout/menu.svg" class="burger-menu" alt="menu" />
-    </nav>
-    <h2 class="landing-title">
-      Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
-      Et vous, qui êtes vous ?
-      <select id="target">
-        <option value="parent">parent</option>
-        <option value="enseignant" selected>enseignant</option>
-        <option value="enfant">enfant</option>
-      </select>
-    </h2>
-    <button class="landing-button">c'est parti !</button>
-  </div>
-  <div class="landing-content--desktop">
-    <nav>
-      <a href="index.html">
-        <img src="img/img-layout/logo.svg" class="logo" alt="NNO"/>
-      </a>
-      <ul class="nav-menu text-normal">
-        <li class="active"><a href="index.html">grand public</a></li>
-        <li><a href="teachers.html">enseignant</a></li>
-        <li><a href="kids.html">enfant</a></li>
-        <li><a href="#form">contact</a></li>
-      </ul>
-    </nav>
-    <h2 class="landing-title">
-      Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique !
-      Et vous, qui êtes vous ?
-    </h2>
-    <div class="landing-buttons">
-      <button class="landing-button landing-button--yellow">grand public</button>
-      <button class="landing-button landing-button--lightorange">enfant</button>
-      <button class="landing-button">enseignant</button>
+
+<body class="">
+  <header class="header">
+    <div class="nav__wrapper">
+      <h1 class="nav__logo-outer">
+        <a href="index.html">
+          <img src="img/img-layout/logo.svg" class="nav__logo" alt="NNO" />
+        </a>
+      </h1>
+      <nav class="nav__links-outer">
+        <ul class="nav__links text-normal">
+          <li class="nav__title">nos différents espaces</li>
+          <li class="nav__link active">
+            <a href="index.html">grand public</a>
+          </li>
+          <li class="nav__link">
+            <a href="teachers.html">enseignant</a>
+          </li>
+          <li class="nav__link">
+            <a href="kids.html">enfant</a>
+          </li>
+          <li class="nav__link nav__link--highlighted">
+            <a href="#form">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="bm__outer">
+          <div class="bm">
+            <span class="bm__line"></span>
+            <span class="bm__line"></span>
+            <span class="bm__line"></span>
+          </div>
+        </div>
+    </div>
+    <!-- <span>made with love at hetic</span> -->
+  </header>
+  <section class="landing">
+    <div class="landing-content">
+      <h2 class="landing-title">
+        Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique ! Et vous, qui êtes vous ?
+        <select id="target">
+          <option value="parent">parent</option>
+          <option value="enseignant" selected>enseignant</option>
+          <option value="enfant">enfant</option>
+        </select>
+      </h2>
+      <button class="landing-button">c'est parti !</button>
+    </div>
+    <div class="landing-content--desktop">
+      <h2 class="landing-title">
+        Enchantés, nous enseignons aux enfants les merveilles et les dangers du numérique ! Et vous, qui êtes vous ?
+      </h2>
+      <div class="landing-buttons">
+        <button class="landing-button landing-button--yellow">grand public</button>
+        <button class="landing-button landing-button--lightorange">enfant</button>
+        <button class="landing-button">enseignant</button>
+      </div>
     </div>
   </div>
+</section>
+<!-- introduction -->
+<section class="introduction">
+  <div class="introduction-text">
+    <h2 class="headline">
+      Devenir des acteurs plutôt que des produits du web.
+    </h2>
+    <span class="introduction-text-detail">
+      Nous proposons une pédagogie ludique et interactive avec les plus jeunes à travers plusieurs thématiques telles que:
+      la sécurité informatique, la culture du numérique, de la sensibilisation à la protection de ses données, une initiation
+      à la programmation ainsi que de la culture informatique. Ces thématiques seront abordées sous forme de petits ateliers
+      et seront menés par le corps enseignant ainsi que des bénévoles de notre association.
+    </span>
+    <div class="themes">
+      <h3 class="introduction-text-detail--bold">Les thématiques abordées</h3>
+      <div class="themes-list">
+        <span class="themes-label themes-label--itSecurity">Sécurité informatique</span>
+        <span class="themes-label themes-label--dataProtection">Protection des données</span>
+        <span class="themes-label themes-label--algorithm">Programmation</span>
+        <span class="themes-label themes-label--itCulture">Culture de l'informatique</span>
+        <span class="themes-label themes-label--digitalCulture">Culture du numérique</span>
+     </div>
+    </div>
+  </div>
+  <img src="img/img-layout/algo.svg" class="theme-icon theme-icon--algorithm" alt=""/>
+  <img src="img/img-layout/culture-informatique.svg" class="theme-icon theme-icon--itCulture" alt=""/>
+  <img src="img/img-layout/culture-numerique.svg" class="theme-icon theme-icon--digitalCulture" alt=""/>
+  <img src="img/img-layout/protection-donnees.svg" class="theme-icon theme-icon--dataProtection" alt=""/>
+  <img src="img/img-layout/securite.svg" class="theme-icon theme-icon--itSecurity" alt=""/>
 </section>
 <!-- introduction -->
 <section class="introduction">
@@ -81,25 +128,25 @@
 <!-- support -->
 <section class="s-support">
     <div class="s-support__inner">
-        <h2 class="headline s-support__headline">Nullam id dolor id nibh ultricies vehicula ut id elit.</h2>
+      <h2 class="headline s-support__headline">Nullam id dolor id nibh ultricies vehicula ut id elit.</h2>
 
-        <div class="support-cards">
-            <div class="support-card">
-                <img src="./img/supports-visuels.jpg" class="support-card__img" alt="">
-                <h3 class="support-card--headline">Apprendre les bases de l’informatique simplement en s’appuyant sur des supports visuels synthétiques</h3>
-                <span class="support-card__caption">Infographies sur la circulation des données</span>
-            </div>
-            <div class="support-card active">
-                <img src="./img/supports-ateliers.jpg" class="support-card__img" alt="">
-                <h3 class="support-card--headline">Comprendre l’impact de leurs actions en ligne à travers des ateliers de jeux ou de débats</h3>
-                <span class="support-card__caption">Atelier « Comprendre les enjeux du numérique »</span>
-            </div>
-            <div class="support-card">
-                <img src="./img/support-1.jpg" class="support-card__img" alt="">
-                <h3 class="support-card--headline">Intégrer les logiques de programmation de base grâce aux serious game</h3>
-                <span class="support-card__caption">Serious game sur la programmation</span>
-            </div>
+      <div class="support-cards">
+        <div class="support-card">
+          <img src="./img/supports-visuels.jpg" class="support-card__img" alt="">
+          <h3 class="support-card--headline">Apprendre les bases de l’informatique simplement en s’appuyant sur des supports visuels synthétiques</h3>
+          <span class="support-card__caption">Infographies sur la circulation des données</span>
         </div>
+        <div class="support-card active">
+          <img src="./img/supports-ateliers.jpg" class="support-card__img" alt="">
+          <h3 class="support-card--headline">Comprendre l’impact de leurs actions en ligne à travers des ateliers de jeux ou de débats</h3>
+          <span class="support-card__caption">Atelier « Comprendre les enjeux du numérique »</span>
+        </div>
+        <div class="support-card">
+          <img src="./img/support-1.jpg" class="support-card__img" alt="">
+          <h3 class="support-card--headline">Intégrer les logiques de programmation de base grâce aux serious game</h3>
+          <span class="support-card__caption">Serious game sur la programmation</span>
+        </div>
+      </div>
     </div>
 </section>
 
@@ -156,4 +203,5 @@
 <span></span>
 </body>
 <script type="text/javascript" src="js/index.js"></script>
+
 </html>
