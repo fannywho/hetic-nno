@@ -1,6 +1,13 @@
 @import './_common';
 
-.form {
+#form {
   @include box(#ffd785, 100%, 734px);
-  padding-left: 27px;
+  padding-left: 30px;
+  padding-top: 40px;
+  @include bp('desktop') {
+    padding-top: 90px;
+  }
+  &__container {
+
+  }
 }

@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>NNO - Programme de sensibilisation au numérique</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    <span>Hello World !</span>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+</head>
+<body>
+<span>Hello World !</span>
 
-    <!-- Form  -->
-    <section class="form">
-        
-    </section>
-
-    <span></span>
-  </body>
-  <script type="text/javascript" src="js/index.js"></script>
+<!-- Form  -->
+<section id="form">
+    <div id="form__container">
+        <form class="contact-form">
+            <h2 class="headline contact-form__title">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </h2>
+            <div class="contact-form__container">
+                <div class="contact-form__primary">
+                    <label for="name" class="contact-form__label">Votre prénom et nom</label>
+                    <input id="name" class="contact-form__input">
+                    <label for="email" class="contact-form__label">Votre adresse mail</label>
+                    <input id="email" class="contact-form__input">
+                    <label for="object" class="contact-form__label">Objet de votre message</label>
+                    <input id="object" class="contact-form__input">
+                </div>
+                <div class="contact-form__secondary">
+                    <label for="message" class="contact-form__label">Contenu de votre message</label>
+                    <textarea id="message" class="contact-form__textarea"></textarea>
+                    <button type="submit" class="contact-form__button">Envoyez le message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<span></span>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
 </html>

@@ -98,27 +98,77 @@
 
 //17
 .contact-form{
-  display: flex;
-  flex-direction: column;
-  @include bp('desktop') {
-    flex-direction: row;
-  }
-  &__inputs {
+  width: 80%;
+  margin: 0 auto;
+  &__container {
+    display: flex;
     flex-direction: column;
+    @include bp('desktop') {
+      flex-direction: row;
+    }
   }
-  &__text-area {
+  &__primary {
+    display: flex;
     flex-direction: column;
+    @include bp('desktop') {
+      margin-right: 136px;
+    }
+  }
+  &__secondary {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__label {
+    @include text(Helvetica, 12px, normal, normal, normal, normal, 0px, left);
+    color: #303030;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    @include bp('desktop') {
+      font-size: 16px;
+      margin-top: 45px;
+      margin-bottom: 15px;
+    }
+  }
+  &__title {
+    width: 220px;
+    @include bp('desktop') {
+      width: 577px;
+    }
+  }
+  &__input {
+    @include item-rounded(264px, 38px, 4px, white);
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__textarea {
+    @include item-rounded(264px, 128px, 4px, white);
+    border: none;
+    resize: none;
+    outline: none;
+    @include bp('desktop') {
+      width: 100%;
+      height: 185px;
+    }
+  }
+  &__button {
+    @include item-rounded(264px, 42px, 21px, #303030);
+    @include bp('desktop') {
+      @include item-rounded(100%, 58px, 29px, #303030);
+      @include text(ArialRoundedBold, 20px, normal, normal, normal, normal, 0px, center)
+    }
+    color: white;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
-//18
-.contact-form--label{
-  @include text(Helvetica, 12px, normal, normal, normal, normal, 0px, left);
-  color: #303030;
-  @include bp('desktop') {
-    font-size: 16px;
-  }
-}
 
 //19
 .contact-form--input{
@@ -134,13 +184,6 @@
   @include text(Helvetica, 14px, 300, normal, normal, 1.43px, 0px, left);
 }
 
-//21
-.contact-form--button{
-  @include item-rounded(264px, 42px, 21px, #303030);
-  @include bp('desktop') {
-    @include item-rounded(473px, 58px, 29px, #303030);
-  }
-}
 
 //16
 .footer-message{
