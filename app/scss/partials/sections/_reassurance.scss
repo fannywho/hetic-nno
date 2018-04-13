@@ -9,6 +9,11 @@
     @include bp('desktop') {
       flex-direction: row-reverse;
     }
+    &--reverse-column {
+      @include bp-max('tablet') {
+        flex-direction: column-reverse;
+      }
+    }
   }
   &__title {
     width: 220px;
@@ -31,6 +36,7 @@
     }
     &--yellow {
       @include box($reassuranceYellow, 100%, 375px);
+      margin-bottom: 40px;
       @include bp('desktop') {
         margin-right: 40px;
       }
