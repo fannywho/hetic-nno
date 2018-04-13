@@ -8,6 +8,6 @@
     import "app/Structure.js";
     import "app/GameController.js";
     import "app/Game.js";
-    const game = new Game("game-holder", document);
+    const game = new Game("jeu", document);
     game.start();
 })();
