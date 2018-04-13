@@ -129,7 +129,7 @@
     }
   }
   &__input {
-    @include item-rounded(100%, 38px, 4px, white);
+    @include item-rounded(auto, 38px, 4px, white);
     @include text(Helvetica, 14px, 300, normal, normal, normal, 0, left);
     border: none;
     padding-left: 20px;
@@ -149,7 +149,7 @@
     }
   }
   &__textarea {
-    @include item-rounded(100%, 128px, 4px, white);
+    @include item-rounded(auto, 128px, 4px, white);
     @include text(Helvetica, 14px, 300, normal, normal, 1.5px, 0px, left);
     border: none;
     resize: none;
