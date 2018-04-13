@@ -1,0 +1,6 @@
+@import './_common';
+
+.form {
+  @include box(#ffd785, 100%, 734px);
+  padding-left: 27px;
+}
