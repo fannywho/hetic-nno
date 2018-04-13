@@ -29,43 +29,40 @@
   font-family: ArialRoundedBold;
   font-size: 18px;
   color: $basicBlack;
+  line-height: 1.33;
 
-  @include bp("mobile") {
+  @include bp("desktop") {
     font-size: 32px;
   }
 }
 
+.themes-label {
+  color: $basicWhite;
+  display: inline;
+  padding: 10px 15px;
+  margin: 10px 0;
+  cursor: default;
+  @include text(Helvetica, 17px, normal, normal, normal, auto, auto, auto);
+}
+
 .themes-label--itSecurity {
   @include item-rounded(auto, auto, 20px, $itSecurity);
-  color: $basicWhite;
 }
 
 .themes-label--dataProtection{
   @include item-rounded(auto, auto, 20px, $dataProtection);
-  color: $basicWhite;
 }
 
 .themes-label--algorithm{
   @include item-rounded(auto, auto, 20px, $algorithm);
-  color: $basicWhite;
 }
 
 .themes-label--itCulture{
   @include item-rounded(auto, auto, 20px, $itCulture);
-  color: $basicWhite;
 }
 
 .themes-label--digitalCulture{
   @include item-rounded(auto, auto, 20px, $digitalCulture);
-  color: $basicWhite;
-}
-
-.introduction-box{
-  opacity: 0;
-  @include bp("desktop") {
-    opacity: 1;
-    @include box(#DDD, 80%, auto);
-  }
 }
 
 .text-big{
@@ -74,10 +71,6 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
-
-.themes-icon{
-  opacity: 0.5;
 }
 
 .reassurance-box-yellow{
